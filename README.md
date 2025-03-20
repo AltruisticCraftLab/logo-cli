@@ -1,15 +1,9 @@
 # logo-cli
 
-To install dependencies:
+Just enter the following command in the terminal -- to download and extract the theme files.
+
+Happy coding! 🚀
 
 ```bash
-bun install
+bunx AltruisticCraftLab/logo-cli logo
 ```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.2.5. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
