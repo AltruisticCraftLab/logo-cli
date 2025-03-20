@@ -1,0 +1,19 @@
+{
+  "name": "logo-cli",
+  "version": "0.1.0",
+  "bin": {
+    "logo": "dist/logo-cli.js"
+  },
+  "scripts": {
+    "build": "bun build scripts/logo-cli.ts --outdir dist --target bun"
+  },
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
