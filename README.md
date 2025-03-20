@@ -1,6 +1,6 @@
 # logo-cli
 
-Just enter the following command in the terminal -- to download and extract the theme files.
+Just enter the following command in the terminal -- to download the logo files.
 
 Happy coding! 🚀
 
