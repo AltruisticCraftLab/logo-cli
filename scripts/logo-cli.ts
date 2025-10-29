@@ -34,11 +34,12 @@ const downloadFile = async (url: string, dest: string) => {
 };
 
 // === Main ===
-const file = "logo.tsx";
 
 // Updated to use 'main' branch - change this if your default branch is different
 const repoBaseURL =
   "https://raw.githubusercontent.com/AltruisticCraftLab/starter-snippets/main/logo";
+
+const file = "logo.tsx";
 
 const tsxUrl = `${repoBaseURL}/${file}`;
 

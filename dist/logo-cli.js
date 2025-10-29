@@ -26,8 +26,8 @@ var downloadFile = async (url, dest) => {
     process.exit(1);
   }
 };
-var file = "logo.tsx";
 var repoBaseURL = "https://raw.githubusercontent.com/AltruisticCraftLab/starter-snippets/main/logo";
+var file = "logo.tsx";
 var tsxUrl = `${repoBaseURL}/${file}`;
 var targetDir = join(process.cwd(), "src/components/shared");
 ensureDir(targetDir);
