@@ -26,17 +26,12 @@ var downloadFile = async (url, dest) => {
     process.exit(1);
   }
 };
-var moduleName = process.argv[2];
-if (!moduleName) {
-  console.log("\u2757 Usage: mycli <module-name>");
-  process.exit(1);
-}
-console.log(`\uD83D\uDE80 Fetching files for module: ${moduleName}`);
+var file = "logo.tsx";
 var repoBaseURL = "https://raw.githubusercontent.com/AltruisticCraftLab/starter-snippets/main/logo";
-var tsxUrl = `${repoBaseURL}/${moduleName}.tsx`;
+var tsxUrl = `${repoBaseURL}/${file}`;
 var targetDir = join(process.cwd(), "src/components/shared");
 ensureDir(targetDir);
-var tsxTargetPath = join(targetDir, `${moduleName}.tsx`);
+var tsxTargetPath = join(targetDir, file);
 console.log(`\u2B07\uFE0F Downloading React component...`);
 await downloadFile(tsxUrl, tsxTargetPath);
 console.log("\uD83C\uDF89 Done! Files added successfully.");

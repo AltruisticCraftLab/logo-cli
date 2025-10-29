@@ -34,26 +34,19 @@ const downloadFile = async (url: string, dest: string) => {
 };
 
 // === Main ===
-const moduleName = process.argv[2];
-
-if (!moduleName) {
-  console.log("❗ Usage: mycli <module-name>");
-  process.exit(1);
-}
-
-console.log(`🚀 Fetching files for module: ${moduleName}`);
+const file = "logo.tsx";
 
 // Updated to use 'main' branch - change this if your default branch is different
 const repoBaseURL =
   "https://raw.githubusercontent.com/AltruisticCraftLab/starter-snippets/main/logo";
 
-const tsxUrl = `${repoBaseURL}/${moduleName}.tsx`;
+const tsxUrl = `${repoBaseURL}/${file}`;
 
 const targetDir = join(process.cwd(), "src/components/shared");
 
 ensureDir(targetDir);
 
-const tsxTargetPath = join(targetDir, `${moduleName}.tsx`);
+const tsxTargetPath = join(targetDir, file);
 
 console.log(`⬇️ Downloading React component...`);
 await downloadFile(tsxUrl, tsxTargetPath);
