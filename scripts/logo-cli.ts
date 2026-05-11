@@ -43,7 +43,12 @@ const file = "logo.tsx";
 
 const tsxUrl = `${repoBaseURL}/${file}`;
 
-const targetDir = join(process.cwd(), "src/components/shared");
+const outputArg = process.argv
+  .find((a) => a.startsWith("--output="))
+  ?.split("=")[1];
+const targetDir = outputArg
+  ? join(process.cwd(), outputArg)
+  : join(process.cwd(), "src/components/shared");
 
 ensureDir(targetDir);
 

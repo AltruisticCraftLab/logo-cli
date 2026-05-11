@@ -29,7 +29,8 @@ var downloadFile = async (url, dest) => {
 var repoBaseURL = "https://raw.githubusercontent.com/AltruisticCraftLab/starter-snippets/main/logo";
 var file = "logo.tsx";
 var tsxUrl = `${repoBaseURL}/${file}`;
-var targetDir = join(process.cwd(), "src/components/shared");
+var outputArg = process.argv.find((a) => a.startsWith("--output="))?.split("=")[1];
+var targetDir = outputArg ? join(process.cwd(), outputArg) : join(process.cwd(), "src/components/shared");
 ensureDir(targetDir);
 var tsxTargetPath = join(targetDir, file);
 console.log(`\u2B07\uFE0F Downloading React component...`);
